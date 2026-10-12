@@ -1,0 +1,13 @@
+* Lab 1a: Diode I-V characteristic (1N4148 with 1k series resistor)
+.include models.lib
+V1 in 0 DC 0
+R1 in a 1k
+D1 a 0 D1N4148
+.dc V1 -5 5 0.01
+.control
+run
+let vd = v(a)
+let id_ma = -i(V1)*1000
+wrdata ../results/lab1_diode_iv.csv vd id_ma
+.endc
+.end

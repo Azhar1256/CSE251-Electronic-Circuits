@@ -1,0 +1,5 @@
+* Diode models used across the labs (typical datasheet-fitted parameters)
+.model D1N4148 D(IS=2.52n RS=0.568 N=1.752 CJO=4p M=0.4 TT=20n BV=100 IBV=100u)
+.model D1N4007 D(IS=7.03n RS=0.034 N=1.8 CJO=10p M=0.33 TT=4.3u BV=1000 IBV=5u)
+* 5.1 V Zener (1N4733A-like): breakdown set by BV/IBV
+.model DZ5V1 D(IS=1n RS=1 N=1.2 CJO=100p BV=5.1 IBV=49m NBV=1.2)

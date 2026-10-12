@@ -1,0 +1,24 @@
+* Lab 2: Full-wave bridge rectifier, unfiltered and with a 100 uF smoothing capacitor
+* (10 V peak, 50 Hz, 4 x 1N4007, 1k load). The source floats; the load is ground-referenced.
+.include models.lib
+.param CF=1p
+V1 a b SIN(0 10 50)
+D1 a pos D1N4007
+D2 b pos D1N4007
+D3 0 a D1N4007
+D4 0 b D1N4007
+RL pos 0 1k
+CF pos 0 {CF}
+Rleak b 0 100Meg
+.tran 20u 100m 0 20u
+.control
+run
+let vin = v(a)-v(b)
+wrdata ../results/lab2_bridge_unfiltered.csv vin v(pos)
+alterparam CF=100u
+reset
+run
+let vin = v(a)-v(b)
+wrdata ../results/lab2_bridge_filtered.csv vin v(pos)
+.endc
+.end

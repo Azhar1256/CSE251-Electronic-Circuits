@@ -1,0 +1,22 @@
+{
+  "lab1_forward_voltage_at_1mA_V": 0.585,
+  "lab1_reverse_current_at_-5V_uA": 0.0025,
+  "lab1_halfwave_peak_out_V": 9.343,
+  "lab1_halfwave_drop_V": 0.657,
+  "lab1_halfwave_dc_out_V": 2.868,
+  "lab1_halfwave_dc_theory_V": 2.974,
+  "lab2_unfiltered_peak_V": 8.693,
+  "lab2_unfiltered_dc_V": 5.169,
+  "lab2_unfiltered_ripple_Vpp": 8.693,
+  "lab2_bridge_drop_V": 1.307,
+  "lab2_ripple_frequency_Hz": 100,
+  "lab2_filtered_peak_V": 8.614,
+  "lab2_filtered_dc_V": 8.29,
+  "lab2_filtered_ripple_Vpp": 0.67,
+  "lab2_filtered_ripple_theory_Vpp": 0.861,
+  "lab3_regulated_V_at_12V_in": 5.117,
+  "lab3_line_regulation_mV_per_V": 9.64,
+  "lab3_load_regulation_pct_0_to_20mA": 1.0,
+  "lab3_dropout_load_current_mA": 32.6,
+  "lab3_dropout_theory_mA": 31.4
+}

@@ -1,0 +1,17 @@
+* Lab 3: Zener shunt regulator (5.1 V Zener, 220 ohm series resistor)
+* Line regulation: sweep input 0-15 V with no load.
+* Load regulation: fixed 12 V input, sweep load current 0-40 mA.
+.include models.lib
+Vin in 0 DC 12
+Rs in out 220
+DZ 0 out DZ5V1
+Iload out 0 DC 5m
+.control
+alter Iload dc = 0
+dc Vin 0 15 0.05
+wrdata ../results/lab3_line_regulation.csv v(out)
+alter Vin dc = 12
+dc Iload 0 40m 0.2m
+wrdata ../results/lab3_load_regulation.csv v(out)
+.endc
+.end

@@ -1,0 +1,11 @@
+* Lab 1b: Half-wave rectifier (10 V peak, 50 Hz, 1N4007, 1k load)
+.include models.lib
+V1 in 0 SIN(0 10 50)
+D1 in out D1N4007
+RL out 0 1k
+.tran 20u 60m 0 20u
+.control
+run
+wrdata ../results/lab1_half_wave.csv v(in) v(out)
+.endc
+.end
